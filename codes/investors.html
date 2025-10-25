@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sheba Angels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+body {
+    min-height: max(884px, 100dvh);
+}
+</style>
+
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#ec1380",
+                "background-light": "#f8f6f7",
+                "background-dark": "#221019",
+            },
+            fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "1rem",
+                "xl": "1.5rem",
+                "full": "9999px"
+            },
+        },
+    },
+}
+</script>
+</head>
+
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+    <div class="flex items-center p-4 pb-2 justify-between">
+        <div id="backButton" class="flex size-12 shrink-0 items-center justify-center cursor-pointer hover:opacity-80 transition">
+            <span class="material-symbols-outlined text-gray-800 dark:text-gray-200 text-2xl">arrow_back</span>
+        </div>
+        <h1 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">
+            Meet Our Sheba Angels
+        </h1>
+        <div class="flex size-12 shrink-0 items-center justify-center"></div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex flex-col flex-1 px-4">
+
+    <!-- Search Bar -->
+    <div class="py-3">
+        <label class="flex flex-col min-w-40 h-12 w-full">
+            <div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+                <div class="text-gray-500 dark:text-gray-400 flex border-none bg-white dark:bg-gray-800 items-center justify-center pl-4 rounded-l-xl border-r-0">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-gray-900 dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white dark:bg-gray-800 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 pl-2 text-base font-normal leading-normal" placeholder="Search by name, industry..." value=""/>
+            </div>
+        </label>
+    </div>
+
+    <!-- Filter Chips -->
+    <div class="flex gap-3 py-2 overflow-x-auto">
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 px-4 shadow-sm border border-gray-200 dark:border-gray-700">
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 text-base">tune</span>
+            <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Industry</p>
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 text-base">expand_more</span>
+        </button>
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 px-4 shadow-sm border border-gray-200 dark:border-gray-700">
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 text-base">tune</span>
+            <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Expertise</p>
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 text-base">expand_more</span>
+        </button>
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-gray-800 px-4 shadow-sm border border-gray-200 dark:border-gray-700">
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 text-base">tune</span>
+            <p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Investment Stage</p>
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 text-base">expand_more</span>
+        </button>
+    </div>
+
+    <!-- Angel Profiles Grid -->
+    <div class="py-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Profile Card 1 -->
+        <div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-gray-800 overflow-hidden">
+            <div class="p-6 flex flex-col items-center text-center">
+                <img class="w-24 h-24 rounded-full object-cover ring-4 ring-primary/20" alt="Professional headshot of Aida Abebe" src="./assets/aida.jpg"/>
+                <p class="mt-4 text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight">Aida Abebe</p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Angel Investor &amp; CEO</p>
+                <p class="mt-3 text-gray-600 dark:text-gray-300 text-base italic">“Empowering the next generation of female leaders in tech.”</p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex gap-2 py-2 flex-wrap justify-center">
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">FinTech</p>
+                    </div>
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">Marketing</p>
+                    </div>
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">SaaS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 pt-4">
+                <button class="flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+                    View Profile
+                </button>
+            </div>
+        </div>
+
+        <!-- Profile Card 2 -->
+        <div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-gray-800 overflow-hidden">
+            <div class="p-6 flex flex-col items-center text-center">
+                <img class="w-24 h-24 rounded-full object-cover ring-4 ring-primary/20" alt="Professional headshot of Sara Tadesse" src="./assets/sara.jpg"/>
+                <p class="mt-4 text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight">Sara Tadesse</p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Venture Partner</p>
+                <p class="mt-3 text-gray-600 dark:text-gray-300 text-base italic">“Investing in sustainable agriculture and e-commerce platforms.”</p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex gap-2 py-2 flex-wrap justify-center">
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">Agriculture</p>
+                    </div>
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">E-commerce</p>
+                    </div>
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">Logistics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 pt-4">
+                <button class="flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+                    View Profile
+                </button>
+            </div>
+        </div>
+
+        <!-- Profile Card 3 -->
+        <div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-gray-800 overflow-hidden">
+            <div class="p-6 flex flex-col items-center text-center">
+                <img class="w-24 h-24 rounded-full object-cover ring-4 ring-primary/20" alt="Professional headshot of Hanna Bekele" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTC0IcMoKVeYkuo05dOp04qr0N9igjA6V6LZVMKPwOGzXtFrR6hQoCbxAdkT_zK32Q_bglyyzKd2StEnRf-JZqoz_XXrXY7_NYRGyN4HvxU4TXaGCmSI4yqrn0U2fEWLLclKy5HtimKEhitmi5Oo-12n6xwzu_P7png5aDwrWJla3IZb7csoNFryebLOcK_HGpldkcTYKOKx0SBf_xlu_u1SABCH9-YwGd7xAa2Pj_UixBaTS9Fjxzxr_uFZqIgEClodIiEaxBOw"/>
+                <p class="mt-4 text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight">Hanna Bekele</p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Founder, HB Ventures</p>
+                <p class="mt-3 text-gray-600 dark:text-gray-300 text-base italic">“Passionate about scaling healthcare solutions for Africa.”</p>
+            </div>
+            <div class="px-6 pb-2">
+                <div class="flex gap-2 py-2 flex-wrap justify-center">
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">HealthTech</p>
+                    </div>
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">EdTech</p>
+                    </div>
+                    <div class="flex h-7 items-center rounded-full bg-primary/10 dark:bg-primary/20 px-3">
+                        <p class="text-primary dark:text-pink-300 text-xs font-medium">B2B</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 pt-4">
+                <button class="flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium hover:bg-opacity-90 transition-colors">
+                    View Profile
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Floating Action Button (FAB) -->
+<button class="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg hover:bg-opacity-90 transition-all">
+    <span class="material-symbols-outlined text-white text-3xl">add</span>
+</button>
+
+</div>
+
+<!-- ✅ Back button script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const backButton = document.getElementById("backButton");
+    if (backButton) {
+        backButton.addEventListener("click", () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "index.html"; // fallback
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

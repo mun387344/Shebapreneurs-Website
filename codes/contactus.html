@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>Contact Us - Shebapreneurs</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#ec1380",
+          "background-light": "#f8f6f7",
+          "background-dark": "#221019",
+          maroon: "#800000",
+          coral: "#FF7F50",
+          "light-peach": "#FFF0E5",
+          "soft-rose-gold": "#F7D8D5",
+          charcoal: "#181114",
+        },
+        fontFamily: { display: ["Manrope", "sans-serif"] },
+      },
+    },
+  };
+</script>
+
+<style>
+  .gradient-background {
+    background-image: linear-gradient(to bottom right, #FFF0E5, #F7D8D5);
+  }
+  .dark .gradient-background {
+    background-image: linear-gradient(to bottom right, #221019, #4c2a3d);
+  }
+
+  .menu-slide {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+</style>
+</head>
+
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden gradient-background text-charcoal dark:text-background-light">
+
+<!-- Top App Bar -->
+<header class="flex items-center bg-transparent p-4 pb-2 justify-between sticky top-0 z-20 backdrop-blur-sm">
+  <button id="menu-button" class="flex size-12 shrink-0 items-center justify-center">
+    <span id="menu-icon" class="material-symbols-outlined text-charcoal dark:text-background-light text-3xl">menu</span>
+  </button>
+  <h1 class="text-charcoal dark:text-background-light text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Contact Us</h1>
+  <div class="size-12"></div>
+</header>
+
+
+<!-- Side Menu -->
+<div id="side-menu" class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-[#1a0e14] shadow-lg transform -translate-x-full opacity-0 menu-slide z-30">
+  <nav class="flex flex-col p-6 space-y-4">
+    <a href="home.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary">Home</a>
+    <a href="about.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary">About Us</a>
+    <a href="criteria.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary">Startups & Criteria</a>
+    <a href="investors.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary">Investors</a>
+    <a href="services.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary">Our Services</a>
+    <a href="contactus.html" class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary">Contact Us</a>
+    <a href="join.html" class="mt-4 flex items-center justify-center h-10 rounded-full bg-gradient-to-r from-[#D95383] to-[#800020] text-white font-bold shadow-lg hover:shadow-xl">
+      Join Now
+    </a>
+  </nav>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black/40 hidden z-20 transition-opacity"></div>
+
+<main class="flex-grow px-4 py-6">
+
+  <!-- Intro -->
+  <div class="text-center mb-8">
+    <h2 class="text-charcoal dark:text-background-light tracking-tight text-[28px] font-bold leading-tight">We'd love to hear from you.</h2>
+    <p class="text-charcoal/80 dark:text-background-light/80 text-base font-normal leading-normal pt-1">Get in touch with our team.</p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg rounded-xl shadow-lg p-6 mb-8">
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label for="full-name" class="block text-base font-medium pb-2">Full Name</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name"
+          class="form-input w-full rounded-lg border border-gray-300/50 dark:border-gray-600/50 bg-white/50 dark:bg-black/20 text-charcoal dark:text-background-light h-14 p-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" />
+      </div>
+      <div>
+        <label for="email" class="block text-base font-medium pb-2">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email"
+          class="form-input w-full rounded-lg border border-gray-300/50 dark:border-gray-600/50 bg-white/50 dark:bg-black/20 text-charcoal dark:text-background-light h-14 p-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all" />
+      </div>
+      <div>
+        <label for="message" class="block text-base font-medium pb-2">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..."
+          class="form-textarea w-full rounded-lg border border-gray-300/50 dark:border-gray-600/50 bg-white/50 dark:bg-black/20 text-charcoal dark:text-background-light p-4 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"></textarea>
+      </div>
+      <button type="submit" class="w-full rounded-lg bg-coral text-white font-bold h-14 px-6 text-base leading-6 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral/80 dark:focus:ring-offset-background-dark shadow-md hover:shadow-lg">
+        Send Message
+      </button>
+    </form>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg rounded-xl shadow-lg p-6 mb-8 space-y-5">
+    <h3 class="text-lg font-bold mb-4">More Ways to Connect</h3>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+      <div>
+        <span class="font-semibold">Our Office</span>
+        <p class="text-sm text-charcoal/80 dark:text-background-light/80">Bole Sub-City, Kebele 03/05, Addis Ababa, Ethiopia</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-primary mt-1">mail</span>
+      <div>
+        <span class="font-semibold">General Inquiries</span>
+        <p class="text-sm text-charcoal/80 dark:text-background-light/80">connect@shebapreneurs.com</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-primary mt-1">phone</span>
+      <div>
+        <span class="font-semibold">Call Us</span>
+        <p class="text-sm text-charcoal/80 dark:text-background-light/80">+251 91 123 4567</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Media -->
+  <div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg rounded-xl shadow-lg p-6 text-center">
+    <h3 class="text-lg font-bold mb-4">Follow Our Journey</h3>
+    <div class="flex justify-center items-center gap-6">
+      <a href="#" class="text-charcoal/80 dark:text-background-light/80 hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">facebook</span></a>
+      <a href="#" class="text-charcoal/80 dark:text-background-light/80 hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">alternate_email</span></a>
+      <a href="#" class="text-charcoal/80 dark:text-background-light/80 hover:text-primary transition-colors"><span class="material-symbols-outlined text-3xl">public</span></a>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-maroon text-white w-full mt-12 pt-10 pb-8 text-center">
+  <p class="text-sm text-white/70">© 2024 Shebapreneurs. All Rights Reserved.</p>
+</footer>
+</div>
+
+<!-- JS for Mobile Menu -->
+<script>
+  const menuButton = document.getElementById("menu-button");
+  const sideMenu = document.getElementById("side-menu");
+  const overlay = document.getElementById("overlay");
+  const menuIcon = document.getElementById("menu-icon");
+
+  function toggleMenu() {
+  const isOpen = !sideMenu.classList.contains("-translate-x-full");
+  sideMenu.classList.toggle("-translate-x-full");
+  sideMenu.classList.toggle("opacity-0");
+  overlay.classList.toggle("hidden");
+  menuIcon.textContent = isOpen ? "menu" : "close"; // toggles icon
+}
+
+
+  menuButton.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
+
+  
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shebapreneurs - Grow With Us</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec1380",
+              "background-light": "#f8f6f7",
+              "background-dark": "#221019",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+
+      .menu-slide {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#181114] dark:text-white"
+  >
+    <div
+      class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark font-display group/design-root overflow-x-hidden"
+    >
+      <!-- Top App Bar -->
+      <header
+        class="sticky top-0 z-20 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-2 justify-between"
+      >
+        <button
+          id="menu-button"
+          class="flex items-center justify-center size-12 text-gray-800 dark:text-white"
+        >
+          <span
+            id="menu-icon"
+            class="material-symbols-outlined text-3xl transition-all"
+            >menu</span
+          >
+        </button>
+
+        <h2
+          class="text-[#181114] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+        >
+          Shebapreneurs
+        </h2>
+
+        <div class="flex w-12 items-center justify-end">
+          <button
+            class="flex h-10 w-10 items-center justify-center rounded-full text-[#181114] dark:text-white"
+          >
+            <span class="material-symbols-outlined text-3xl"
+              >account_circle</span
+            >
+          </button>
+        </div>
+      </header>
+
+      <!-- Side Menu -->
+      <div
+        id="side-menu"
+        class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-[#1a0e14] shadow-lg transform -translate-x-full opacity-0 menu-slide z-30"
+      >
+        <nav class="flex flex-col p-6 space-y-4">
+          <a
+            href="home.html"
+            class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary"
+            >About Us</a
+          >
+          <a
+            href="criteria.html"
+            class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary"
+            >Startups & Criteria</a
+          >
+          <a
+            href="investors.html"
+            class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary"
+            >Investors</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary"
+            >Our Services</a
+          >
+          <a
+            href="contactus.html"
+            class="text-gray-800 dark:text-gray-200 font-medium hover:text-primary"
+            >Contact Us</a
+          >
+          <a
+            href="join.html"
+            class="mt-4 flex items-center justify-center h-10 rounded-full bg-gradient-to-r from-[#D95383] to-[#800020] text-white font-bold shadow-lg hover:shadow-xl"
+          >
+            Join Now
+          </a>
+        </nav>
+      </div>
+
+      <!-- Overlay -->
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black/40 hidden z-20 transition-opacity"
+      ></div>
+
+      <!-- Main Content -->
+      <main class="flex flex-col flex-1 px-4 pt-6 pb-8">
+        <h1
+          class="text-[#181114] dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center pb-3"
+        >
+          Grow With Us
+        </h1>
+        <p
+          class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal pb-8 text-center max-w-md mx-auto"
+        >
+          Access our core support systems to elevate your entrepreneurial
+          journey.
+        </p>
+
+        <div class="flex flex-col gap-6">
+          <!-- Card 1 -->
+          <div
+            class="flex flex-col rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 hover:shadow-lg dark:hover:shadow-primary/20"
+          >
+            <div
+              class="w-full aspect-video bg-cover rounded-t-xl"
+              style="background-image: url('./assets/mentorship.jpg');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">Mentorship Programs</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Connect with experienced industry leaders for guidance,
+                invaluable insights, and one-on-one support dedicated to your
+                success.
+              </p>
+              <div class="flex justify-end mt-4">
+                <button
+                  class="rounded-lg bg-primary text-white text-sm font-medium h-10 px-4 hover:bg-primary/90"
+                >
+                  Find a Mentor
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex flex-col rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 hover:shadow-lg dark:hover:shadow-primary/20"
+          >
+            <div
+              class="w-full aspect-video bg-cover rounded-t-xl"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMF5vu8rYVI7TH0HkHK0DQYhTjbluhwsJ97H5ZqvVVmoWpXXe2hb-bu8sOkLNI1BlSxRwCPbHskzpin5CWj6cjTaYzYzTkK25c5yN2yKV1b6PbCz6nmJCW5yAyukJHh8AV9d-rk2IgucDFquJfcKfSKa_Qy3m1nS2dbhR3g_NdKQWrFHl4TE-V7Mi92bicU7o_LqPlmVHZJKtlPX5aX-I4R1Hoch7h2cDT8lVhk0aSCC82ijs6O5z6KF7vG3NVF-rTDHzb4h1r5Q');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">Membership Benefits</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                Join our community to unlock exclusive access to events,
+                resources, funding opportunities, and a powerful network of
+                female entrepreneurs.
+              </p>
+              <div class="flex justify-end mt-4">
+                <button
+                  class="rounded-lg bg-primary text-white text-sm font-medium h-10 px-4 hover:bg-primary/90"
+                >
+                  Become a Member
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex flex-col rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 hover:shadow-lg dark:hover:shadow-primary/20"
+          >
+            <div
+              class="w-full aspect-video bg-cover rounded-t-xl"
+              style="background-image: url('./assets/internship.jpg');"
+            ></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-2">Internship Opportunities</h3>
+              <p class="text-gray-600 dark:text-gray-300">
+                We facilitate connections between emerging talent and
+                established businesses, providing pathways to gain valuable,
+                hands-on experience.
+              </p>
+              <div class="flex justify-end mt-4">
+                <button
+                  class="rounded-lg bg-primary text-white text-sm font-medium h-10 px-4 hover:bg-primary/90"
+                >
+                  Explore Internships
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JS: Mobile Menu -->
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const sideMenu = document.getElementById("side-menu");
+      const overlay = document.getElementById("overlay");
+      const menuIcon = document.getElementById("menu-icon");
+
+      function toggleMenu() {
+        const isOpen = !sideMenu.classList.contains("-translate-x-full");
+        sideMenu.classList.toggle("-translate-x-full");
+        sideMenu.classList.toggle("opacity-0");
+        overlay.classList.toggle("hidden");
+        menuIcon.textContent = isOpen ? "menu" : "close";
+      }
+
+      menuButton.addEventListener("click", toggleMenu);
+      overlay.addEventListener("click", toggleMenu);
+    </script>
+  </body>
+</html>
+

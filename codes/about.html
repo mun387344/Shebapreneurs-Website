@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>About Us - Shebapreneurs</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8E44AD",
+            "secondary": "#F39C12",
+            "background-light": "#F8F9FA",
+            "background-dark": "#1A1A1B",
+            "text-light": "#343A40",
+            "text-dark": "#EAEAEA",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+            'soft-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05)',
+          }
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Manrope', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+
+    <!-- Top App Bar -->
+    <div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 pb-3 justify-between shadow-soft">
+      <div class="flex size-10 shrink-0 items-center justify-center" id="back-button">
+        <span class="material-symbols-outlined text-text-light dark:text-text-dark hover:text-primary transition-colors">arrow_back</span>
+      </div>
+      <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center text-text-light dark:text-text-dark">About Us</h2>
+      <div class="size-10"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="@container px-4">
+      <div class="flex min-h-[450px] flex-col gap-6 rounded-xl items-center justify-center p-6 text-center bg-gradient-to-br from-primary to-secondary/80">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">
+            Empowering Ethiopia's Women, One Business at a Time
+          </h1>
+          <h2 class="text-white/90 text-base font-normal leading-normal">
+            Shebapreneurs is a platform empowering women entrepreneurs in Ethiopia by connecting them with investors, mentorship, and community.
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-4 flex flex-col gap-6">
+      <!-- Vision -->
+      <div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-text-light/10 p-6 shadow-soft">
+        <div class="flex items-center gap-4">
+          <div class="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <span class="material-symbols-outlined">visibility</span>
+          </div>
+          <h3 class="text-xl font-bold text-text-light dark:text-text-dark">Our Vision</h3>
+        </div>
+        <p class="text-base font-normal leading-normal text-text-light/80 dark:text-text-dark/80">
+          We envision a future where every woman entrepreneur in Ethiopia has the resources, support, and network to build thriving businesses and drive economic growth.
+        </p>
+      </div>
+
+      <!-- How We Work -->
+      <div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-text-light/10 p-6 shadow-soft">
+        <div class="flex items-center gap-4">
+          <div class="flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <span class="material-symbols-outlined">hub</span>
+          </div>
+          <h3 class="text-xl font-bold text-text-light dark:text-text-dark">How We Work</h3>
+        </div>
+        <p class="text-base font-normal leading-normal text-text-light/80 dark:text-text-dark/80">
+          Our platform bridges the gap between ambitious women-led startups and dedicated investors, providing a curated ecosystem for mentorship, funding, and collaboration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Impact Section -->
+    <div>
+      <h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Impact</h2>
+      <div class="grid grid-cols-2 gap-4 px-4">
+        <div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-text-light/10 p-6 text-center shadow-soft">
+          <span class="text-3xl font-black text-primary">150+</span>
+          <p class="text-sm font-normal text-text-light/80 dark:text-text-dark/80">Entrepreneurs Funded</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-text-light/10 p-6 text-center shadow-soft">
+          <span class="text-3xl font-black text-primary">80+</span>
+          <p class="text-sm font-normal text-text-light/80 dark:text-text-dark/80">Mentors Joined</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-text-light/10 p-6 text-center shadow-soft">
+          <span class="text-3xl font-black text-primary">$2M+</span>
+          <p class="text-sm font-normal text-text-light/80 dark:text-text-dark/80">Capital Raised</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white dark:bg-text-light/10 p-6 text-center shadow-soft">
+          <span class="text-3xl font-black text-primary">10K+</span>
+          <p class="text-sm font-normal text-text-light/80 dark:text-text-dark/80">Community Members</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div>
+      <h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8">Our Community in Action</h2>
+      <div class="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4">
+        <img class="aspect-[4/3] w-4/5 shrink-0 snap-center rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK86hzD3rjcQ4PQNaj_o2a2gVscFkHXddwdQ4a0ys_NujB5jx0_VEHSujNeXM3ZbefiMEMfMtKWxIbM9HVDjC8YDSPF2csWn9MR9sfSgz80a0KgM7q0eIUj3WrYIBhUZ6v8u3RyRNuQW0gQX-_OCGq9YYWJWSruue6f0KSnaRLyV41KIJlXKVg4hICu_Q5SJT2-sYBmHRliQ4IajeaHpBIK09MUNG7yOM6slG1oK4OZaVfjE2xlTITyjcTnRIa0L8PDMWTRrtSAw"/>
+        <img class="aspect-[4/3] w-4/5 shrink-0 snap-center rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVlj6C0v2QjJowBTM7RsUPMSf8bRXP2lssArWPAnb-Q15Z_qvODe621P_vpgMQgFllhyOAH3Pop3Pv1uVjAQEXVNLRsvSymzW27Xm1OCnbL_cZvxz3GxJNdWddnxWnpq3Xh8TqZ-v2tZPVgXnomKkxqfYP11Y8KHZxemqrsoBtsnQytyPUjYNQJJx0Pq1BmRosKJJJucRDYIlkL4fomdyv2ZoHgl9Lpue8joBEBPgiIB2Dqim_ZddkYmP8-n8pE-dKaIcVpTxu0g"/>
+        <img class="aspect-[4/3] w-4/5 shrink-0 snap-center rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp5Dk7hQhVYrvhGmSdPxeKjFW873ajmKr1-N78GNq-GfInAutuCo9S5Ecgp6e5Uk8EH7ERiEFF_bWKL67dYJhkVCmSLtBcuW3oIOQTx0z4Be1iHVKBQazRV2tVHEKBpe6azrIm8j8DRr1VUBpCX_u_TxHvLMdJLSOe8wF-9xPN5f2hq-L42GEkq-SbgJfKiJHthapZZSp7MHWlmfIUFZGC7wd5AxCY_IG4SXSkXVsmo9bpa67MPiUcj205fUgaF6hSBhDzJif1OQ"/>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="px-4 py-8">
+      <div class="flex flex-col gap-4 text-center">
+        <h3 class="text-2xl font-bold text-text-light dark:text-text-dark">Ready to Make a Difference?</h3>
+        <p class="text-base text-text-light/80 dark:text-text-dark/80">Whether you're an aspiring entrepreneur or an investor looking for the next big thing, your journey starts here.</p>
+        <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-center">
+          <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-gradient-to-r from-secondary to-orange-400 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-secondary/30 transition-transform duration-200 hover:scale-105">
+            <a href="join.html">Become an Investor</a>
+          </button>
+          <button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary/10 text-primary dark:bg-primary/20 dark:text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors duration-200 hover:bg-primary/20">
+            <a href="join.html">Join Our Community</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-gray-200 dark:border-white/10 bg-white dark:bg-text-light/10">
+      <div class="mx-auto max-w-7xl px-4 py-8">
+        <div class="flex justify-center space-x-6">
+          <a class="text-gray-400 hover:text-gray-500" href="#"><span class="sr-only">Facebook</span>📘</a>
+          <a class="text-gray-400 hover:text-gray-500" href="#"><span class="sr-only">Instagram</span>📸</a>
+          <a class="text-gray-400 hover:text-gray-500" href="#"><span class="sr-only">Twitter</span>🐦</a>
+        </div>
+        <p class="mt-8 text-center text-xs leading-5 text-gray-500">© 2024 Shebapreneurs. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ✅ Back Button Functionality -->
+  <script>
+    document.getElementById("back-button").addEventListener("click", () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
